@@ -1,4 +1,4 @@
-# y
+# 20171018_FirstVuex
 
 > A Vue.js project
 
@@ -25,3 +25,10 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+#GitHub Page上架流程參考
+https://medium.com/@mwolfhoffman/deploying-to-github-pages-with-vue-webpack-cli-5b2ba17f14a0
+> 1. npm run build
+> 2. dist folder rename docs
+> 3. fix docs/index.html Css & Js link add src="./***" 
+> 4. github page settings source select "master branch /docs folder"
