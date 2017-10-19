@@ -2,12 +2,12 @@
     <div id="product-list-one">
     <h2>product-list-one</h2>
     <ul>
-      <li v-for='product in saleProducts'>
+      <li v-for='product in getSaleProducts' :key="product">
         <span class="name">{{product.name}}</span>
            <span class="price">£{{product.price}}</span>
       </li>
     </ul>
-    <button type="button" @click='reducePrice(1)'>Reduce Price</button>
+    <button type="button" @click='actionReducePrice(1)'>Reduce Price</button>
     </div>
 </template>
 
@@ -16,20 +16,19 @@
 import { mapActions, mapGetters } from 'vuex'
 
 export default{
-    // name: '',
+  // name: '',
   // props: ['productss'],
-  data () {
-    return {
-    }
-  },
   computed: {
+    // 寫法與two不同
+    // two為物件
+    // one為陣列
     ...mapGetters([
-      'saleProducts'
+      'getSaleProducts'
     ])
   },
   methods: {
     ...mapActions([
-      'reducePrice'
+      'actionReducePrice'
     ])
   }
 }

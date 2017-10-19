@@ -3,7 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import { store } from './store/store'
+// 引入 store 資料夾（上面五隻 js ）
+// 預設會去找 index.js  如果沒有的話會報錯！
+// 所有東西在index組合
+import store from './store/index'
 
 Vue.config.productionTip = false
 
